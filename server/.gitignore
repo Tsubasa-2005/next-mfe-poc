@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+
+# env files
+.env*
+!.env.sample
+
+# database
+*.db
+*.db-shm
+*.db-wal

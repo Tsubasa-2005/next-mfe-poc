@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env src/index.ts",
+    "start": "node --env-file-if-exists=.env src/index.ts",
+    "db:migrate": "node --env-file-if-exists=.env src/migrate.ts",
+    "lint": "biome lint --config-path ../biome.json .",
+    "format": "biome format --config-path ../biome.json --write .",
+    "check": "biome check --config-path ../biome.json --write ."
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.11",
+    "better-auth": "^1.5.5",
+    "better-sqlite3": "^12.8.0",
+    "hono": "^4.12.8",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.7",
+    "@types/better-sqlite3": "^7.6.13",
+    "typescript": "^5.9.3"
+  }
+}
